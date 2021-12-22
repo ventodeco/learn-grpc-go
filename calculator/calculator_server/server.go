@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"grpc-course/calculator/calculatorpb"
+	"io"
 	"log"
 	"net"
 	"time"
@@ -40,7 +41,7 @@ func (*server) PrimeNumberDecomposition(req *calculatorpb.NumberRequest, stream 
 	for N > 1 {
 		if N%k == 0 {
 			res := &calculatorpb.NumberResponse{
-				ResultPrime: k,
+				Result: float32(k),
 			}
 			stream.Send(res)
 			time.Sleep(1000 * time.Millisecond)
@@ -50,6 +51,35 @@ func (*server) PrimeNumberDecomposition(req *calculatorpb.NumberRequest, stream 
 		}
 	}
 	return nil
+}
+
+func (*server) ComputeAverage(stream calculatorpb.CalculatorService_ComputeAverageServer) error {
+	fmt.Printf("ComputeAverage function was invoked with streaming request...\n")
+
+	var result, jumlah int64
+
+	result = 0
+	jumlah = 0
+
+	for {
+		req, err := stream.Recv()
+
+		if err == io.EOF {
+			var _res float32
+			_res = float32(result) / float32(jumlah)
+			// we have finished reading the client streaming
+			return stream.SendAndClose(&calculatorpb.NumberResponse{
+				Result: _res,
+			})
+		}
+
+		if err != nil {
+			log.Fatalf("Error while reading client streaming: %v", err)
+		}
+
+		jumlah++
+		result += req.GetNumber()
+	}
 }
 
 func main() {

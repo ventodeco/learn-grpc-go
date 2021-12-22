@@ -21,12 +21,16 @@ message NumberRequest {
 }
 
 message NumberResponse {
-    int64 result_prime = 1;
+    float result = 1;
 }
 
 service CalculatorService {
     // unary
     rpc Sum(SumRequest) returns (SumResponse) {};
 
+    // server streaming case study
     rpc PrimeNumberDecomposition(NumberRequest) returns (stream NumberResponse) {};
+
+    // client streaming case study
+    rpc ComputeAverage(stream NumberRequest) returns (NumberResponse) {};
 }
