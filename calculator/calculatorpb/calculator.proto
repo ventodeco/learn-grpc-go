@@ -33,4 +33,7 @@ service CalculatorService {
 
     // client streaming case study
     rpc ComputeAverage(stream NumberRequest) returns (NumberResponse) {};
+
+    // bi directional streaming case study
+    rpc FindMaximum(stream NumberRequest) returns (stream NumberResponse) {};
 }

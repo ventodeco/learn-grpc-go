@@ -291,7 +291,7 @@ var file_calculator_calculatorpb_calculator_proto_rawDesc = []byte{
 	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0x28, 0x0a,
 	0x0e, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
 	0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x02, 0x52,
-	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xf1, 0x01, 0x0a, 0x11, 0x43, 0x61, 0x6c, 0x63,
+	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xbd, 0x02, 0x0a, 0x11, 0x43, 0x61, 0x6c, 0x63,
 	0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a,
 	0x03, 0x53, 0x75, 0x6d, 0x12, 0x16, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f,
 	0x72, 0x2e, 0x53, 0x75, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x63,
@@ -306,9 +306,14 @@ var file_calculator_calculatorpb_calculator_proto_rawDesc = []byte{
 	0x12, 0x19, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x4e, 0x75,
 	0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x63, 0x61,
 	0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x42, 0x1b, 0x5a, 0x19, 0x2e,
-	0x2f, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2f, 0x63, 0x61, 0x6c, 0x63,
-	0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x12, 0x4a, 0x0a, 0x0b, 0x46,
+	0x69, 0x6e, 0x64, 0x4d, 0x61, 0x78, 0x69, 0x6d, 0x75, 0x6d, 0x12, 0x19, 0x2e, 0x63, 0x61, 0x6c,
+	0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2e, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74,
+	0x6f, 0x72, 0x2e, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x28, 0x01, 0x30, 0x01, 0x42, 0x1b, 0x5a, 0x19, 0x2e, 0x2f, 0x63, 0x61, 0x6c,
+	0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2f, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74,
+	0x6f, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -336,11 +341,13 @@ var file_calculator_calculatorpb_calculator_proto_depIdxs = []int32{
 	1, // 1: calculator.CalculatorService.Sum:input_type -> calculator.SumRequest
 	3, // 2: calculator.CalculatorService.PrimeNumberDecomposition:input_type -> calculator.NumberRequest
 	3, // 3: calculator.CalculatorService.ComputeAverage:input_type -> calculator.NumberRequest
-	2, // 4: calculator.CalculatorService.Sum:output_type -> calculator.SumResponse
-	4, // 5: calculator.CalculatorService.PrimeNumberDecomposition:output_type -> calculator.NumberResponse
-	4, // 6: calculator.CalculatorService.ComputeAverage:output_type -> calculator.NumberResponse
-	4, // [4:7] is the sub-list for method output_type
-	1, // [1:4] is the sub-list for method input_type
+	3, // 4: calculator.CalculatorService.FindMaximum:input_type -> calculator.NumberRequest
+	2, // 5: calculator.CalculatorService.Sum:output_type -> calculator.SumResponse
+	4, // 6: calculator.CalculatorService.PrimeNumberDecomposition:output_type -> calculator.NumberResponse
+	4, // 7: calculator.CalculatorService.ComputeAverage:output_type -> calculator.NumberResponse
+	4, // 8: calculator.CalculatorService.FindMaximum:output_type -> calculator.NumberResponse
+	5, // [5:9] is the sub-list for method output_type
+	1, // [1:5] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
@@ -451,6 +458,8 @@ type CalculatorServiceClient interface {
 	PrimeNumberDecomposition(ctx context.Context, in *NumberRequest, opts ...grpc.CallOption) (CalculatorService_PrimeNumberDecompositionClient, error)
 	// client streaming case study
 	ComputeAverage(ctx context.Context, opts ...grpc.CallOption) (CalculatorService_ComputeAverageClient, error)
+	// bi directional streaming case study
+	FindMaximum(ctx context.Context, opts ...grpc.CallOption) (CalculatorService_FindMaximumClient, error)
 }
 
 type calculatorServiceClient struct {
@@ -536,6 +545,37 @@ func (x *calculatorServiceComputeAverageClient) CloseAndRecv() (*NumberResponse,
 	return m, nil
 }
 
+func (c *calculatorServiceClient) FindMaximum(ctx context.Context, opts ...grpc.CallOption) (CalculatorService_FindMaximumClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_CalculatorService_serviceDesc.Streams[2], "/calculator.CalculatorService/FindMaximum", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &calculatorServiceFindMaximumClient{stream}
+	return x, nil
+}
+
+type CalculatorService_FindMaximumClient interface {
+	Send(*NumberRequest) error
+	Recv() (*NumberResponse, error)
+	grpc.ClientStream
+}
+
+type calculatorServiceFindMaximumClient struct {
+	grpc.ClientStream
+}
+
+func (x *calculatorServiceFindMaximumClient) Send(m *NumberRequest) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *calculatorServiceFindMaximumClient) Recv() (*NumberResponse, error) {
+	m := new(NumberResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // CalculatorServiceServer is the server API for CalculatorService service.
 type CalculatorServiceServer interface {
 	// unary
@@ -544,6 +584,8 @@ type CalculatorServiceServer interface {
 	PrimeNumberDecomposition(*NumberRequest, CalculatorService_PrimeNumberDecompositionServer) error
 	// client streaming case study
 	ComputeAverage(CalculatorService_ComputeAverageServer) error
+	// bi directional streaming case study
+	FindMaximum(CalculatorService_FindMaximumServer) error
 }
 
 // UnimplementedCalculatorServiceServer can be embedded to have forward compatible implementations.
@@ -558,6 +600,9 @@ func (*UnimplementedCalculatorServiceServer) PrimeNumberDecomposition(*NumberReq
 }
 func (*UnimplementedCalculatorServiceServer) ComputeAverage(CalculatorService_ComputeAverageServer) error {
 	return status.Errorf(codes.Unimplemented, "method ComputeAverage not implemented")
+}
+func (*UnimplementedCalculatorServiceServer) FindMaximum(CalculatorService_FindMaximumServer) error {
+	return status.Errorf(codes.Unimplemented, "method FindMaximum not implemented")
 }
 
 func RegisterCalculatorServiceServer(s *grpc.Server, srv CalculatorServiceServer) {
@@ -629,6 +674,32 @@ func (x *calculatorServiceComputeAverageServer) Recv() (*NumberRequest, error) {
 	return m, nil
 }
 
+func _CalculatorService_FindMaximum_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(CalculatorServiceServer).FindMaximum(&calculatorServiceFindMaximumServer{stream})
+}
+
+type CalculatorService_FindMaximumServer interface {
+	Send(*NumberResponse) error
+	Recv() (*NumberRequest, error)
+	grpc.ServerStream
+}
+
+type calculatorServiceFindMaximumServer struct {
+	grpc.ServerStream
+}
+
+func (x *calculatorServiceFindMaximumServer) Send(m *NumberResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *calculatorServiceFindMaximumServer) Recv() (*NumberRequest, error) {
+	m := new(NumberRequest)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 var _CalculatorService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "calculator.CalculatorService",
 	HandlerType: (*CalculatorServiceServer)(nil),
@@ -647,6 +718,12 @@ var _CalculatorService_serviceDesc = grpc.ServiceDesc{
 		{
 			StreamName:    "ComputeAverage",
 			Handler:       _CalculatorService_ComputeAverage_Handler,
+			ClientStreams: true,
+		},
+		{
+			StreamName:    "FindMaximum",
+			Handler:       _CalculatorService_FindMaximum_Handler,
+			ServerStreams: true,
 			ClientStreams: true,
 		},
 	},
